@@ -1,0 +1,328 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Burban', sans-serif, Verdana;
+    src: url('../Fontes/BurbankBigCondensed-Bold.otf') format('truetype');
+  }
+
+:root {
+    --cor1: #041a59;
+    --cor2: #00c0fe;
+    --cor3: #9e20c4;
+    --cor4: #f0e033;
+
+    --font-princiapl: 'Burban', sans-serif, Verdana;
+}
+
+
+
+@media screen and (max-width: 880px) {
+    div#fundo-video video {
+        display: none;
+    }
+
+    body header img#logo {
+        margin: auto;
+    }
+
+    body div#corpo {
+        display: flex;
+        justify-content: unset;
+    }
+
+    body div > div#historia {
+        width: 100%;
+        display: block;
+        margin: auto;
+        text-align: justify;
+        padding: 20px;
+    }
+
+    body div img {
+        display: none;
+    }
+
+    body aside img {
+        display: none;
+    }
+
+    aside div#lateral {
+        width: 100%;
+    }
+
+    body div#back {
+        display: none;
+    }
+
+    body div#back a {
+        display: block;
+    }
+
+    div#primeira {
+        background-position: -120px;
+    }
+
+    body div#back-cell {
+        display: flex;
+    }
+
+     body main div.imagens::after {
+        display: none;
+    }
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    background-color: rgb(181, 181, 181);
+}
+
+/* Fundo */
+
+div#fundo-video {
+    display: flex;
+    background-color: black;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -100;
+    position: absolute;
+}
+
+div#fundo-video video {
+    width: 100%;
+    min-height: 100vh;
+    opacity: 0.3;
+}
+
+
+/* Cabeçalho */
+
+header > img {
+    display: flex;
+    position: absolute;
+    width: 20%;
+    margin: 0px 50px;
+}
+
+/* Corpo */
+
+div#corpo {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+div > div#historia  {
+    width: 45%;
+    display: inline-block;
+    margin: 0px 100px;
+}
+
+div > div#historia > h1 {
+    color: white;
+    font-family: var(--font-princiapl);
+    font-size: 2.8em;
+}
+
+div > div#historia > p {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+div img {
+    width: 40%;
+}
+
+div > div > a#btn {
+    display: flex;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    width: 150px;
+    border: 1px solid var(--cor1);
+    padding: 10px 20px;
+    margin-top: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor2);
+    transition: 0.5s;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.359);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.303);
+}
+
+div > div > a#btn:hover {
+    background: var(--cor1);
+    box-shadow: 1px 1px 30px  var(--cor1);
+    border: 1px solid var(--cor2);
+}
+
+main#corpo {
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.205);
+    display: block;
+    padding: 30px;
+    margin: auto;
+    min-width:300px;
+    max-width: 1000px;
+    height: 100%;
+    background-color: white;
+    margin-top: 110px;
+}
+
+main#corpo article h1 {
+    color: #151515;
+    font-weight: bold;
+    font-family: var(--font-princiapl);
+    font-size: 2em;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-image: linear-gradient(to right, #9e20c48e, #fff);
+    padding: 2px 10px;
+}
+
+main#corpo article h2 {
+    color: #151515;
+    font-weight: bold;
+    font-family: var(--font-princiapl);
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-image: linear-gradient(to right, #9e20c48e, #fff);
+    padding: 2px 10px;
+}
+
+main#corpo article p {
+    font-family: var(--font-princiapl);
+    font-size: 1em;
+    margin-bottom: 20px;
+    text-align: justify;
+    text-indent: 30px;
+}
+
+.imagens {
+    min-height: 100vh;
+    width: 100%;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.388);
+    border: 1px solid var(--cor4);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.imagens::after {
+    content: "";
+    height: 100%;
+    width: 66%;
+    position: absolute;
+    z-index: 8;
+    background: -moz-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, #000 100% );
+    background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, #000 100% );
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, #000 100% );
+}
+
+main#corpo div#primeira {
+    background-image: url(../Imagens/1perso.jpg);
+}
+
+main#corpo div#segunda {
+    background-image: url(../Imagens/fortnite.jpg);
+}
+
+
+aside {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    min-height: 50vh;
+    align-items: center;
+}
+
+aside h1 {
+    font-family: var(--font-princiapl);
+    color: var(--cor1);
+    font-size: 2em;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+aside p {
+    text-indent: 30px;
+    text-align: justify;
+    font-family: var(--font-princiapl);
+}
+
+aside #lateral {
+    width: 55%;
+}
+
+aside img {
+    width: 300px;
+}
+
+aside img#pacote {
+    width: 400px;
+}
+
+div#back {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../Imagens/back.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+
+div#back > a {
+    margin-right: 100px;
+    color: black;
+    text-decoration: none;
+    font-size: 2em;
+    font-family: var(--font-princiapl);
+    border: 1px solid black;
+    padding: 10px 30px;
+    border-radius: 0px 20px;
+    transition: 0.5s;
+}
+
+div#back > a:hover {
+    background-color: var(--cor4);
+    box-shadow: 3px 3px 10px var(--cor4);
+    border: 1px solid var(--cor4);
+}
+
+
+div#back-cell {
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../Imagens/backcell.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+
+div#back-cell > a {
+    margin-top: -100px;
+    color: var(--cor4);
+    text-decoration: none;
+    font-size: 2em;
+    font-family: var(--font-princiapl);
+    border: 1px solid black;
+    background: black;
+    padding: 10px 30px;
+    border-radius: 0px 20px;
+}
